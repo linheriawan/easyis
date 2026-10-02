@@ -1,0 +1,8 @@
+<div class="fi">
+  <label for="{name}">{label}</label>
+  <select name="{name}" id="{name}">
+    {#each values as c}
+    <option value="{c.id}" {c.selected}>{c.name}</option>
+    {/each}
+  </select>
+</div>

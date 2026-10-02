@@ -1,0 +1,14 @@
+<nav class="appnav">
+  {#each menu as mod}
+  <ul>
+    <li>{mod.name}</li>
+    <li>
+      <ul>
+        {#each Object.entries(mod.subs) as [link, name]}
+        <li><a href="{link}">{name}</a></li>
+        {/each}
+      </ul>
+    </li>
+  </ul>
+  {/each}
+</nav>

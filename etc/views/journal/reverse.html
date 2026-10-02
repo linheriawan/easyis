@@ -1,0 +1,11 @@
+<div>
+    <h1>Reversal</h1>
+    <Inp type="text" name="a" />
+    <Inp type="text" name="b" />
+    <Inp type="text" name="c" />
+</div>
+<script type="module">
+fetch('http://localhost:3000/journal/cccid/reverse', { method: 'POST' })
+  .then(res => res.json())
+  .then(console.log);
+</script>

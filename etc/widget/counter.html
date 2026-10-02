@@ -1,0 +1,27 @@
+<div class="counter"></div>
+<script>
+(function () {
+  const mount = document.currentScript.previousElementSibling;
+
+  // same idea as lib/template.js's render(): {key} -> data[key]. a small
+  // local copy, since there's no static-asset route yet to literally share
+  // that file with the browser — state changes call update(), which
+  // re-renders the whole template and replaces this element's content.
+  // no dependency tracking, no compiler, no diffing: the smallest real
+  // unit of reactivity, not a clone of Vue/Svelte.
+  function render(template, data) {
+    return template.replace(/\{(\w+)\}/g, (_, key) => data[key] ?? '');
+  }
+
+  const template = '<span>{count}</span> <button>+1</button>';
+  let data = { count: 0 };
+
+  function update(patch) {
+    data = { ...data, ...patch };
+    mount.innerHTML = render(template, data);
+    mount.querySelector('button').onclick = () => update({ count: data.count + 1 });
+  }
+
+  update({});
+})();
+</script>

@@ -1,0 +1,83 @@
+[
+  {
+    "accounting":{
+      "name":"Finance & Accounting",
+      "subs":[
+        {"Ledger":{"path":"ledger/","ops":["list","get"]}},
+        {"Journals":{"path":"journal/","ops":["list","get","create","update","posting","reverse"]}},
+        {"Accounts Payable":{"path":"accounting/ap/","ops":["list","get","create","update","delete"]}},
+        {"Accounts Receivable":{"path":"accounting/ar/","ops":["list","get","create","update","delete"]}},
+        {"Fixed Assets":{"path":"accounting/asset/","ops":["list","get","create","update","delete"]}},
+        {"Budget":{"path":"accounting/budget/","ops":["list","get","create","update","delete"]}}
+      ]
+    }
+  },
+  {
+    "sales":{
+      "name":"Sales & CRM",
+      "subs":[
+        {"Customer":{"path":"sales/customer/","ops":["list","get","create","update","delete"]}},
+        {"Quotation":{"path":"sales/quotation/","ops":["list","get","create","update","delete"]}},
+        {"Sales Order":{"path":"sales/sales_order/","ops":["list","get","create","update","delete"]}},
+        {"Opportunity":{"path":"sales/opportunity/","ops":["list","get","create","update","delete"]}}
+      ]
+    }
+  },
+  {
+    "purchasing":{
+      "name":"Purchasing",
+      "subs":[
+        {"Vendor":{"path":"purchasing/vendor/","ops":["list","get","create","update","delete"]}},
+        {"RFQ":{"path":"purchasing/rfq/","ops":["list","get","create","update","delete"]}},
+        {"Purchase Order":{"path":"purchasing/purchase_order/","ops":["list","get","create","update","delete"]}},
+        {"Vendor Invoice":{"path":"purchasing/vendor_invoice/","ops":["list","get","create","update","delete"]}}
+      ]
+    }
+  },
+  {
+    "inventory":{
+      "name":"Inventory & Warehouse",
+      "subs":[
+        {"Item":{"path":"inventory/item/","ops":["list","get","create","update","delete"]}},
+        {"Warehouse":{"path":"inventory/warehouse/","ops":["list","get","create","update","delete"]}},
+        {"Stock Transfer":{"path":"inventory/stock_transfer/","ops":["list","get","create","update","delete"]}},
+        {"Stock Adjustment":{"path":"inventory/stock_adjustment/","ops":["list","get","create","update","delete"]}}
+      ]
+    }
+  },
+  {
+    "hr":{
+      "name":"Human Resources",
+      "subs":[
+        {"Employee":{"path":"hr/employee/","ops":["list","get","create","update","delete"]}},
+        {"Attendance":{"path":"hr/attendance/","ops":["list","get","create","update","delete"]}},
+        {"Leave":{"path":"hr/leave/","ops":["list","get","create","update","delete"]}},
+        {"Payroll":{"path":"hr/payroll/","ops":["list","get","create","update","delete"]}}
+      ]
+    }
+  },
+  {
+    "master":{
+      "name":"Master Data",
+      "subs":[
+        {"COA":{"path":"master/coa/","ops":["list","get","create","update"]}},
+        {"Currency":{"path":"master/currency/","ops":["list","get","create","update","delete"]}},
+        {"Company":{"path":"master/company/","ops":["list","get","create","update","delete"]}},
+        {"orgUnit":{"path":"master/org_unit/","ops":["list","get","create","update","delete"]}},
+        {"UOM":{"path":"master/uom/","ops":["list","get","create","update","delete"]}},
+        {"Tax Code":{"path":"master/tax_code/","ops":["list","get","create","update","delete"]}}
+      ]
+    }
+  },
+  {
+    "system":{
+      "name":"System",
+      "subs":[
+        {"User":{"path":"system/user/","ops":["list","get","create","update","delete"]}},
+        {"Role":{"path":"system/role/","ops":["list","get","create","update","delete"]}},
+        {"Permission":{"path":"system/permission/","ops":["list","get","create","update","delete"]}},
+        {"Audit Log":{"path":"system/audit_log/","ops":["list","get"]}}
+      ]
+    }
+  }
+]

@@ -1,0 +1,28 @@
+<div>
+
+  <div class="toolbar">
+      <h1>Account</h1>
+      <a href="/master/coa">Back to list</a>
+  </div>
+  <form method="post" action="/master/coa/{coaId}/save">
+    <div class="toolbar">
+        <i></i><button type="submit">Save</button>
+    </div>
+    <div class="grid col-2">
+    <Inp label="Code" name="code" value="coa.code"/>
+    <Inp label="Name" name="name" value="coa.name"/>
+    <Sel label="Company" name="companyid" values="companies" value="coa.companyid"/>
+    <Sel label="Type" name="type" values="types" value="coa.type"/>
+    <Sel label="Normal Balance" name="normalBalance" values="balances" value="coa.normalBalance"/>
+    <Sel label="Parent Account" name="parentid" values="parents" value="coa.parentid"/>
+
+    <Inp label="Description" name="description" value="coa.description"/>
+
+    <div class="fi">
+      <label for="isActive">Active</label>
+      <input type="checkbox" name="isActive" id="isActive" {activeChecked}>
+    </div>
+    </div>
+  </form>
+
+</div>

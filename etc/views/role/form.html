@@ -1,0 +1,37 @@
+<div>
+
+  <div class="toolbar">
+      <h1>Role</h1>
+      <a href="/system/role">Back to list</a>
+  </div>
+  <form method="post" action="/system/role/{roleId}/save">
+    <div class="toolbar">
+        <i></i>
+        <button type="submit">Save</button>
+    </div>
+    <Inp label="Name" name="name" value="role.name"/>
+
+    <h2>Permissions</h2>
+    {#each groups as group}
+    <details open>
+      <summary>{group.module}</summary>
+      {#each group.subs as sub}
+      <div class="sub-group">
+        <strong>{sub.sub}</strong>
+        <div>
+        {#each sub.items as item}
+        <label>
+          <input type="checkbox" name="grant" value="{item.key}" {item.checkedAttr}>
+          {item.op}
+        </label>
+        {/each}
+        </div>
+      </div>
+      {/each}
+    </details>
+    {/each}
+
+
+  </form>
+
+</div>

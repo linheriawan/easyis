@@ -1,0 +1,11 @@
+{
+  "name": "easyis",
+  "private": true,
+  "scripts": {
+    "dev": "bun run --watch lib/server.js",
+    "db": "bun run --watch lib/database.js"
+  },
+  "dependencies": {
+    "mysql2": "^3.24.5"
+  }
+}
